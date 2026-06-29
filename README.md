@@ -33,10 +33,30 @@ pip install -r requirements.txt
 
 ## Progress
 
-- [ ] Project setup
+- [x] Project setup
 - [ ] Text Cleaning
 - [ ] Tokenization
 - [ ] Stopwords
 - [ ] Stemming & Lemmatization
 - [ ] POS Tagging
 - [ ] NER
+
+## Project Structure
+
+```
+nlp-toolkit/
+├── nlp_toolkit/
+│   ├── __init__.py
+│   ├── cleaner.py
+│   ├── tokenizer.py
+│   ├── stopwords.py
+│   ├── stemmer.py
+│   ├── lemmatizer.py
+│   ├── pos_tagger.py
+│   └── ner.py
+├── tests/
+│   └── test_cleaner.py
+├── requirements.txt
+├── setup.py
+└── README.md
+```
