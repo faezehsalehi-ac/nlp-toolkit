@@ -9,3 +9,6 @@ class TextCleaner:
     
     def remove_numbers(self, text):
         return re.sub(r'\d+', '', text)
+    
+    def to_lowecase(self, text):
+        return text.lower()
