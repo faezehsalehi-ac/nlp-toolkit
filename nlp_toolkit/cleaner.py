@@ -22,4 +22,4 @@ class TextCleaner:
         return text
     
     def remove_extra_spaces(self, text):
-        return re.sub(r'\s+', '', text).strip()
+        return re.sub(r'\s+', ' ', text).strip()
