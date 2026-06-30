@@ -18,6 +18,7 @@ class TextCleaner:
         text = self.remove_numbers(text)
         text = self.remove_punctuation(text)
         text = self.to_lowecase(text)
+        text = self.remove_extra_spaces(text)
         return text
     
     def remove_extra_spaces(self, text):
