@@ -19,3 +19,6 @@ class TextCleaner:
         text = self.remove_punctuation(text)
         text = self.to_lowecase(text)
         return text
+    
+    def remove_extra_spaces(self, text):
+        return re.sub(r'\s+', '', text).strip()
