@@ -34,7 +34,7 @@ pip install -r requirements.txt
 ## Progress
 
 - [x] Project setup
-- [ ] Text Cleaning
+- [x] Text Cleaning
 - [ ] Tokenization
 - [ ] Stopwords
 - [ ] Stemming & Lemmatization
