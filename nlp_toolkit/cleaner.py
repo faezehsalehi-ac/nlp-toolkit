@@ -42,6 +42,8 @@ class TextCleaner:
 
             temp = placeholder
             temp = self.remove_punctuation(temp)
+            if remove_numbers:
+                temp = self.remove_numbers(temp)
             temp = self.to_lowercase(temp)
 
             text = text.replace(temp, word)
