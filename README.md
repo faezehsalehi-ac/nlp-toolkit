@@ -1,62 +1,181 @@
 # NLP Toolkit
 
-I built this library from scratch to learn how NLP works under the hood.
-Instead of just using libraries like spaCy or NLTK directly,
-I implemented the core concepts myself.
+A lightweight Python library for learning and experimenting with Natural Language Processing (NLP) from scratch.
 
-## Requirements
+Instead of treating NLP as a black box, this project implements core NLP components step by step to better understand how they work internally. The project is designed with clean architecture, modularity, and extensibility in mind.
 
-- Python 3.14.6
-- Git 2.54.0
-- pip 26.1.2
+---
 
-## Dependencies
+## Philosophy
 
-- spaCy 3.8.13 — used for POS Tagging and NER
-- NLTK 3.9.4 — used for Tokenization and Stemming
-- pytest 9.1.1 — for unit testing
+The goal of this project is not to replace mature NLP libraries such as spaCy or NLTK.
 
-## What it does
+Instead, it focuses on:
 
-- Cleans raw text (removes HTML, numbers, special characters)
-- Tokenizes text into words and sentences
-- Removes stopwords
-- Stems and lemmatizes words
-- Tags parts of speech (POS)
-- Detects named entities (NER)
+- Understanding NLP algorithms from first principles
+- Writing clean, maintainable Python code
+- Building reusable NLP components
+- Following software engineering best practices
+- Creating a foundation for future research projects
+
+---
+
+## Features
+
+### Completed
+
+- ✅ Text Cleaning
+
+### In Progress
+
+- 🚧 Tokenization
+
+### Planned
+
+- ⏳ Stopword Removal
+- ⏳ Stemming
+- ⏳ Lemmatization
+- ⏳ Part-of-Speech (POS) Tagging
+- ⏳ Named Entity Recognition (NER)
+
+---
 
 ## Installation
 
+Clone the repository:
+
+```bash
 git clone https://github.com/faezehsalehi-ac/nlp-toolkit.git
 cd nlp-toolkit
-pip install -r requirements.txt
+```
 
-## Progress
+Create a virtual environment (recommended):
 
-- [x] Project setup
-- [x] Text Cleaning
-- [ ] Tokenization
-- [ ] Stopwords
-- [ ] Stemming & Lemmatization
-- [ ] POS Tagging
-- [ ] NER
+```bash
+python -m venv .venv
+```
+
+Activate it.
+
+Windows:
+
+```bash
+.venv\Scripts\activate
+```
+
+Linux / macOS:
+
+```bash
+source .venv/bin/activate
+```
+
+Install the package in editable mode:
+
+```bash
+pip install -e .
+```
+
+---
+
+## Quick Start
+
+```python
+from nlp_toolkit.cleaner import TextCleaner
+
+cleaner = TextCleaner()
+
+text = "<h1>Hello, World! 123</h1>"
+
+clean_text = cleaner.clean(text)
+
+print(clean_text)
+```
+
+Output:
+
+```text
+hello world
+```
+
+---
 
 ## Project Structure
 
 ```
 nlp-toolkit/
-├── nlp_toolkit/
-│   ├── __init__.py
-│   ├── cleaner.py
-│   ├── tokenizer.py
-│   ├── stopwords.py
-│   ├── stemmer.py
-│   ├── lemmatizer.py
-│   ├── pos_tagger.py
-│   └── ner.py
+│
+├── src/
+│   └── nlp_toolkit/
+│       ├── cleaner.py
+│       ├── tokenizer.py
+│       ├── stopwords.py
+│       ├── stemmer.py
+│       ├── lemmatizer.py
+│       ├── pos_tagger.py
+│       ├── ner.py
+│       └── __init__.py
+│
 ├── tests/
-│   └── test_cleaner.py
-├── requirements.txt
-├── setup.py
-└── README.md
+│
+├── README.md
+├── LICENSE
+├── pyproject.toml
+└── requirements.txt
 ```
+
+---
+
+## Development Roadmap
+
+### Phase 1 — NLP Foundations
+
+- [x] Project setup
+- [x] Packaging
+- [x] Text Cleaner
+- [ ] Tokenizer
+- [ ] Stopword Removal
+- [ ] Stemmer
+- [ ] Lemmatizer
+
+### Phase 2 — Advanced NLP
+
+- [ ] POS Tagger
+- [ ] Named Entity Recognition
+
+### Phase 3 — Production Ready
+
+- [ ] Full test coverage
+- [ ] Documentation
+- [ ] GitHub Actions
+- [ ] Docker support
+- [ ] Publish to PyPI
+
+---
+
+## Design Principles
+
+This project follows several software engineering principles:
+
+- Modular architecture
+- Reusable components
+- Type hints
+- Comprehensive documentation
+- Unit testing
+- Clean Git history
+- Extensible APIs
+
+---
+
+## Contributing
+
+This project is currently under active development.
+
+Suggestions, discussions, and improvements are always welcome.
+
+---
+
+## License
+
+This project is licensed under the MIT License.
+
+See the LICENSE file for more information.
