@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nlp-toolkit"
+version = "0.1.0"
+description = "A lightweight Python library for learning and experimenting with Natural Language Processing."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { file = "LICENSE" }
+
+authors = [
+    { name = "Faezeh Salehi" }
+]
+
+keywords = [
+    "nlp",
+    "natural-language-processing",
+    "text-processing",
+    "tokenization",
+    "machine-learning"
+]
+
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/faezehsalehi-ac/nlp-toolkit"
+Repository = "https://github.com/faezehsalehi-ac/nlp-toolkit"
+Issues = "https://github.com/faezehsalehi-ac/nlp-toolkit/issues"
