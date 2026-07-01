@@ -44,7 +44,7 @@ class TextCleaner:
             temp = self.remove_punctuation(temp)
             temp = self.to_lowercase(temp)
 
-            text = text.replace(placeholder.lower(), word)
+            text = text.replace(temp, word)
 
 
 
