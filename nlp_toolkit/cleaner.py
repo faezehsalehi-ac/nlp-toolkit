@@ -40,6 +40,10 @@ class TextCleaner:
 
         for placeholder, word in placeholders.items():
 
+            temp = placeholder
+            temp = self.remove_punctuation(temp)
+            temp = self.to_lowercase(temp)
+
             text = text.replace(placeholder.lower(), word)
 
 
